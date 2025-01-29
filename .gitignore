@@ -1,0 +1,10 @@
+.DS_Store       # macOS Finder files
+.env            # Environment variables (sensitive data - be careful!)
+config.js       # Configuration files that might contain secrets
+*.log           # Log files
+tmp/            # Temporary files
+node_modules/   # Node modules files
+build/          # Build output directories
+dist/           # Distribution or build output directories
+.idea/          # IntelliJ IDEA project files
+.vscode/        # VS Code settings
