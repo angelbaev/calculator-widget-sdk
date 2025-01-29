@@ -9,9 +9,11 @@ export class BadgesLabelCalculator extends AbstractCalculator {
         super("Badges Label Calculator");
     }
 
-
     validator(container: HTMLElement): boolean {
-        const inputElement = container.querySelector('input') as HTMLInputElement;
+        const shadow = this.getShadowRoot(container);
+
+        const inputElement = shadow.querySelector('input') as HTMLInputElement;
+        console.log('inputElement', inputElement)
         if (!inputElement) return false;
 
         const inputValue = parseFloat(inputElement.value);
@@ -19,17 +21,25 @@ export class BadgesLabelCalculator extends AbstractCalculator {
     }
 
     render(container: HTMLElement): void {
-        const inputElement = document.createElement('input');
-        inputElement.type = 'number';
-        inputElement.placeholder = 'Enter badge value';
+        const shadow = this.getShadowRoot(container);
 
-        const calculateButton = document.createElement('button');
-        calculateButton.textContent = 'Calculate';
+        shadow.innerHTML = "";
 
-        const resultElement = document.createElement('span');
-        resultElement.textContent = `Calculated result: ${this.value}`;
+        this.loadStyles(shadow, 'badges-label');
 
-        // Изпълняваме калкулацията при натискане на бутона
+
+        shadow.innerHTML += `
+        <div class="badge-calculator">
+            <input type="number" class="badge-input" placeholder="Enter badge value" />
+            <button class="calculate-btn">Calculate</button>
+            <span class="result">Calculated result: 0</span>
+        </div>
+    `;
+
+        const inputElement = shadow.querySelector('.badge-input') as HTMLInputElement;
+        const resultElement = shadow.querySelector('.result') as HTMLSpanElement;
+        const calculateButton = shadow.querySelector('.calculate-btn') as HTMLButtonElement;
+
         calculateButton.addEventListener('click', () => {
             if (this.validator(container)) {
                 this.value = parseFloat(inputElement.value) * 1.25;
@@ -38,9 +48,5 @@ export class BadgesLabelCalculator extends AbstractCalculator {
                 resultElement.textContent = "Invalid input";
             }
         });
-
-        container.appendChild(inputElement);
-        container.appendChild(calculateButton);
-        container.appendChild(resultElement);
     }
 }
