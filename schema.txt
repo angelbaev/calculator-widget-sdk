@@ -1,0 +1,48 @@
+/calculator-widget-sdk
+¦
++-- /src
+¦   +-- /widgets
+¦   ¦   +-- calculator-widget.ts          // Main class for custom element <calculator-widget>
+¦   ¦   +-- calculator-widget-factory.ts  // Logic for creating calculators
+¦   ¦   +-- interfaces.ts                // Interfaces and types for calculators
+¦   +-- /calculators
+¦   ¦   +-- /business-cards
+¦   ¦   ¦   +-- business-cards-calculator.ts // Main logic for business cards
+¦   ¦   ¦   +-- schema.json               // Data for business cards
+¦   ¦   ¦   +-- styles.css                // Styles for business cards
+¦   ¦   +-- /badges-label
+¦   ¦   ¦   +-- badges-label-calculator.ts  // Main logic for labels
+¦   ¦   ¦   +-- schema.json               // Data for labels
+¦   ¦   ¦   +-- styles.css                // Styles for labels
+¦   ¦   +-- /print-cups
+¦   ¦       +-- print-cups-calculator.ts    // Main logic for cups
+¦   ¦       +-- schema.json               // Data for cups
+¦   ¦       +-- styles.css                // Styles for cups
+¦   +-- /infra
+¦   ¦   +-- /abstract
+¦   ¦   ¦   +-- abstract-calculator.ts     // Abstract class for calculators
+¦   ¦   +-- /service
+¦   ¦   ¦   +-- abstract-service.ts        // Abstract class for services
+¦   ¦   +-- /factory
+¦   ¦       +-- calculator-factory.ts      // Logic for creating calculators
+¦   +-- /utils
+¦       +-- build-calculator.ts            // Calculation function
+¦       +-- round-number.ts               // Rounding function
+¦       +-- validation.ts                 // Validation for input data
+¦
++-- /dist                                // Folder for built JavaScript
+¦   +-- main.js                           // Output file
+¦
++-- /assets
+¦   +-- /css
+¦   ¦   +-- global-styles.css             // Global styles
+¦   +-- /images
+¦       +-- logo.png                      // Logo
+¦
++-- index.html                           // Example HTML file
++-- tsconfig.json                        // TypeScript configuration
++-- package.json                         // Project settings
++-- webpack.config.js                    // Webpack configuration (or other build system)
+
+
+// npx webpack --config webpack.config.js
