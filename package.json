@@ -7,6 +7,7 @@
     "start": "webpack serve --port 3006"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "glob": "^11.0.1",
     "ts-loader": "^9.5.2",
     "typescript": "^5.0.0",
@@ -15,7 +16,9 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "css-loader": "^7.1.2",
     "inversify": "^6.2.1",
-    "reflect-metadata": "^0.2.2"
+    "reflect-metadata": "^0.2.2",
+    "style-loader": "^4.0.0"
   }
 }

@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/widgets/calculator-widget.ts',
@@ -16,10 +17,14 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'], // or 'style-loader', 'css-loader', 'postcss-loader' if you use PostCSS
+            },
         ],
     },
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.ts', '.js', '.css'],
     },
     mode: 'development',
     devtool: 'inline-source-map', // More efficient for development
@@ -35,5 +40,9 @@ module.exports = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new CopyPlugin({
+            patterns: [
+                { from: "src/**/*.css", to: "css/[path][name][ext]" } // Копира всички CSS файлове
+        ]})
     ],
 };
