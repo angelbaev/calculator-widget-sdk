@@ -7,10 +7,8 @@ export class CalculatorWidgetFactory {
         switch (optName) {
             case 'badges-label':
                 //return new BadgesLabelCalculator();
-                const badgesLabelService = new BadgesLabelService(); // Създаване на инстанция на сервиза
-                return new BadgesLabelCalculator(badgesLabelService); // Предаване на сервиза в конструктора на калкулатора
-
-            // Добавете други калкулатори тук при нужда
+                const badgesLabelService = new BadgesLabelService();
+                return new BadgesLabelCalculator(badgesLabelService);
             default:
                 throw new Error('Unknown calculator option');
         }
