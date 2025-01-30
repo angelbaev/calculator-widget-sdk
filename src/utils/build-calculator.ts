@@ -1,20 +1,24 @@
 import { roundNumber } from './round-number';
+import {CalculationFormula} from "../infra/types";
 
 interface CalculatorParams {
-    CNT: number;
+    QUANTITY: number;
 }
 
-type CalculationFormula = (params: CalculatorParams) => number;
+//type CalculationFormula = (params: CalculatorParams) => number;
 
-export const buildCalculator = (params: CalculatorParams, formula: CalculationFormula) => {
-    const totalSum = formula(params);
-    const singleSum = totalSum / params['CNT'];
-    const vatSum = totalSum * 1.20;
+
+//export const buildCalculator = (params: CalculatorParams, formula: CalculationFormula) => {
+export const buildCalculator = <T extends object>(params: T, formula: CalculationFormula<T>) => {
+    const { QUANTITY } = params as CalculatorParams;
+    const totalPrice = formula(params);
+    const unitPrice = totalPrice / QUANTITY;
+    const vatPrice = totalPrice * 1.20;
 
     return {
-        singleSum: roundNumber(singleSum, 2),
-        totalSum: roundNumber(totalSum, 2),
-        vatSum: roundNumber(vatSum, 2),
+        unitPrice: roundNumber(unitPrice, 2),
+        totalPrice: roundNumber(totalPrice, 2),
+        vatPrice: roundNumber(vatPrice, 2),
     };
 };
 

@@ -1,12 +1,16 @@
 // src/calculators/badges-label/badges-label-calculator.ts
 import AbstractCalculator from "../../infra/abstract/abstract-calculator";
 import BadgesLabelService from "./badges-label-service";
+import {CalculatorDataProviderInterface} from "../../infra/interface";
 
-export class BadgesLabelCalculator extends AbstractCalculator {
+interface BadgesLabelDataProviderInterface extends CalculatorDataProviderInterface {
+    test: string;
+}
+export class BadgesLabelCalculator extends AbstractCalculator<BadgesLabelDataProviderInterface> {
     private value: number = 0;
 
     constructor(private badgesLabelService: BadgesLabelService) {
-        super("Badges Label Calculator");
+        super("Badges Label Calculator", {test: ''});
     }
 
     validator(container: HTMLElement): boolean {

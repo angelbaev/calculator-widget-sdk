@@ -1,1 +1,72 @@
-{}
+{
+  "printedSide": {
+    "100": {
+      "oneSide": 10,
+      "doubleSide": 12
+    },
+    "200": {
+      "oneSide": 16,
+      "doubleSide": 20
+    },
+    "300": {
+      "oneSide": 22,
+      "doubleSide": 26
+    },
+    "400": {
+      "oneSide": 28,
+      "doubleSide": 34
+    },
+    "500": {
+      "oneSide": 32,
+      "doubleSide": 40
+    }
+  },
+  "paperType": {
+    "100": {
+      "chrome": 2,
+      "linen": 3,
+      "structural": 4
+    },
+    "200": {
+      "chrome": 4,
+      "linen": 6,
+      "structural": 8
+    },
+    "300": {
+      "chrome": 6,
+      "linen": 9,
+      "structural": 12
+    },
+    "400": {
+      "chrome": 8,
+      "linen": 12,
+      "structural": 16
+    },
+    "500": {
+      "chrome": 10,
+      "linen": 15
+    }
+  },
+  "turnaround": {
+    "100": {
+      "48": 0,
+      "24": 5
+    },
+    "200": {
+      "48": 0,
+      "24": 7
+    },
+    "300": {
+      "48": 0,
+      "24": 9
+    },
+    "400": {
+      "48": 0,
+      "24": 11
+    },
+    "500": {
+      "48": 0,
+      "24": 13
+    }
+  }
+}

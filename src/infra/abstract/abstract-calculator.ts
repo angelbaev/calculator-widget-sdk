@@ -1,16 +1,26 @@
 import {generateUUID} from "../../utils/generate-uuid";
 import { CalculatorAwareInterface } from "../interface/calculator-aware.interface";
+import {CalculatorDataProviderInterface} from "../interface";
 
 
-export default abstract class AbstractCalculator implements CalculatorAwareInterface {
+export default abstract class AbstractCalculator<T extends CalculatorDataProviderInterface> implements CalculatorAwareInterface {
     public uuid: string = generateUUID();
+    protected form: T;
 
-    protected constructor(public name: string) {
+    protected constructor(public name: string, defaultForm: Omit<T, keyof CalculatorDataProviderInterface>) {
+        this.form = {
+            quantity: 0,
+            unitPrice: 0,
+            totalPrice: 0,
+            total: 0,
+            ...defaultForm
+        } as T;
     }
 
     protected getShadowRoot(container: HTMLElement) {
         return  container.shadowRoot ?? container.attachShadow({ mode: "open" });
     }
+
     protected loadStyles(shadow: ShadowRoot, name: string): void {
         const link = document.createElement("link");
         link.rel = "stylesheet";
