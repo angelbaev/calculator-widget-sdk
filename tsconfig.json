@@ -5,7 +5,8 @@
     "strict": true,
     "outDir": "./dist",
     "moduleResolution": "node",   // Променете на "node"
-    "resolveJsonModule": true      // Позволява импортирането на JSON файлове
+    "resolveJsonModule": true,      // Позволява импортирането на JSON файлове
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*"
