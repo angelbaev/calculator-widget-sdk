@@ -24,7 +24,7 @@ export default abstract class AbstractCalculator<T extends CalculatorDataProvide
     protected loadStyles(shadow: ShadowRoot, name: string): void {
         const link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href = `./css/src/calculators/${name}/styles.css`;
+        link.href = `${process.env.API_URL}/css/src/calculators/${name}/styles.css`;
         shadow.appendChild(link);
     }
 

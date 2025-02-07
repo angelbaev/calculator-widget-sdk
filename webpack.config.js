@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
+const DotenvWebpackPlugin = require('dotenv-webpack');
 
 module.exports = {
     entry: './src/widgets/calculator-widget.ts',
@@ -43,6 +44,12 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { from: "src/**/*.css", to: "css/[path][name][ext]" } // Копира всички CSS файлове
-        ]})
+        ]}),
+        new DotenvWebpackPlugin({
+            path: './.env', // Path to your .env file (optional, defaults to ./.env)
+            safe: false, // Set to true to ensure that all env variables in .env.example are present in .env.
+            allowEmptyValues: true, // Set to true to allow empty values, otherwise will throw error if variable is not set.
+            systemvars: true, // Set to true if you want to load system environment variables as well.
+        }),
     ],
 };
