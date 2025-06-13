@@ -1,36 +1,8 @@
-.badge-calculator {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 250px;
-    background-color: #f9f9f9;
-}
-
-.badge-input {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.calculate-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.calculate-btn:hover {
-    background-color: #0056b3;
-}
-
-.result {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
+.calculator-container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
