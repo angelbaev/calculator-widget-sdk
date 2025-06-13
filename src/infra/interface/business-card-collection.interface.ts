@@ -4,4 +4,5 @@ export interface BusinessCardCollectionInterface  extends CollectionAwareInterfa
     printedSide: Record<string, Record<string, number>>;
     paperType: Record<string, Record<string, number>>;
     turnaround: Record<string, Record<string, number>>;
+    lamination: Record<string, Record<string, number>>;
 }

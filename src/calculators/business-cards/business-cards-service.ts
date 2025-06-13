@@ -10,7 +10,8 @@ export default class BusinessCardsService extends AbstractService<BusinessCardCo
     }
 
     init(): void {
-        console.log('Initializing BusinessCardsService...');
+        console.log('Initializing BusinessCardsService with updated schema...');
+
         this.setData(schema as BusinessCardCollectionInterface);
     }
 
@@ -22,6 +23,12 @@ export default class BusinessCardsService extends AbstractService<BusinessCardCo
     getPaperTypeCollection(): Record<string, Record<string, number>> {
         const data = this.getData();
         return data ? data.paperType : {};
+    }
+
+    // Добавяме нов метод за колекцията с ламинати
+    getLaminationCollection(): Record<string, Record<string, number>> {
+        const data = this.getData();
+        return data ? data.lamination : {};
     }
 
     getTurnaroundCollection(): Record<string, Record<string, number>> {

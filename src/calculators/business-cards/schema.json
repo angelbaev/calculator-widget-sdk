@@ -1,50 +1,168 @@
 {
   "printedSide": {
     "100": {
-      "oneSide": 10,
-      "doubleSide": 12
+      "oneSide": 11,
+      "doubleSide": 16
     },
     "200": {
-      "oneSide": 16,
-      "doubleSide": 20
+      "oneSide": 14.5,
+      "doubleSide": 20.5
     },
     "300": {
-      "oneSide": 22,
-      "doubleSide": 26
+      "oneSide": 18,
+      "doubleSide": 27
     },
     "400": {
-      "oneSide": 28,
-      "doubleSide": 34
+      "oneSide": 21.5,
+      "doubleSide": 33.5
     },
     "500": {
-      "oneSide": 32,
+      "oneSide": 25,
       "doubleSide": 40
+    },
+    "600": {
+      "oneSide": 28.5,
+      "doubleSide": 46.5
+    },
+    "700": {
+      "oneSide": 32,
+      "doubleSide": 53
+    },
+    "800": {
+      "oneSide": 35.5,
+      "doubleSide": 59.5
+    },
+    "900": {
+      "oneSide": 39,
+      "doubleSide": 66
+    },
+    "1000": {
+      "oneSide": 42.5,
+      "doubleSide": 72.5
     }
   },
   "paperType": {
     "100": {
-      "chrome": 2,
-      "linen": 3,
+      "chrome": 1,
       "structural": 4
     },
     "200": {
-      "chrome": 4,
-      "linen": 6,
+      "chrome": 2,
       "structural": 8
     },
     "300": {
-      "chrome": 6,
-      "linen": 9,
+      "chrome": 3,
       "structural": 12
     },
     "400": {
-      "chrome": 8,
-      "linen": 12,
+      "chrome": 4,
       "structural": 16
     },
     "500": {
+      "chrome": 5,
+      "structural": 20
+    },
+    "600": {
+      "chrome": 6,
+      "structural": 24
+    },
+    "700": {
+      "chrome": 7,
+      "structural": 28
+    },
+    "800": {
+      "chrome": 8,
+      "structural": 32
+    },
+    "900": {
+      "chrome": 9,
+      "structural": 36
+    },
+    "1000": {
       "chrome": 10,
-      "linen": 15
+      "structural": 40
+    }
+  },
+  "lamination": {
+    "100": {
+      "oneSideMat": 4,
+      "oneSideGloss": 3.8,
+      "oneSideSatin": 5.8,
+      "doubleSideMat": 6,
+      "doubleSideGloss": 5.6,
+      "doubleSideSatin": 9.6
+    },
+    "200": {
+      "oneSideMat": 5.2,
+      "oneSideGloss": 4.8,
+      "oneSideSatin": 8.8,
+      "doubleSideMat": 8.4,
+      "doubleSideGloss": 7.6,
+      "doubleSideSatin": 12.8
+    },
+    "300": {
+      "oneSideMat": 6.4,
+      "oneSideGloss": 5.8,
+      "oneSideSatin": 11.8,
+      "doubleSideMat": 10.8,
+      "doubleSideGloss": 9.6,
+      "doubleSideSatin": 17.8
+    },
+    "400": {
+      "oneSideMat": 7.6,
+      "oneSideGloss": 6.8,
+      "oneSideSatin": 14.8,
+      "doubleSideMat": 13.2,
+      "doubleSideGloss": 11.6,
+      "doubleSideSatin": 22.8
+    },
+    "500": {
+      "oneSideMat": 8.8,
+      "oneSideGloss": 7.8,
+      "oneSideSatin": 17.8,
+      "doubleSideMat": 15.6,
+      "doubleSideGloss": 13.6,
+      "doubleSideSatin": 27.8
+    },
+    "600": {
+      "oneSideMat": 10,
+      "oneSideGloss": 8.8,
+      "oneSideSatin": 20.8,
+      "doubleSideMat": 18,
+      "doubleSideGloss": 15.6,
+      "doubleSideSatin": 32.8
+    },
+    "700": {
+      "oneSideMat": 11.2,
+      "oneSideGloss": 9.8,
+      "oneSideSatin": 23.8,
+      "doubleSideMat": 20.4,
+      "doubleSideGloss": 17.6,
+      "doubleSideSatin": 37.8
+    },
+    "800": {
+      "oneSideMat": 12.4,
+      "oneSideGloss": 10.8,
+      "oneSideSatin": 26.8,
+      "doubleSideMat": 22.8,
+      "doubleSideGloss": 19.6,
+      "doubleSideSatin": 42.8
+    },
+    "900": {
+      "oneSideMat": 13.6,
+      "oneSideGloss": 11.8,
+      "oneSideSatin": 29.8,
+      "doubleSideMat": 25.2,
+      "doubleSideGloss": 21.6,
+      "doubleSideSatin": 47.8
+    },
+    "1000": {
+      "oneSideMat": 14.8,
+      "oneSideGloss": 12.8,
+      "oneSideSatin": 32.8,
+      "doubleSideMat": 27.6,
+      "doubleSideGloss": 23.6,
+      "doubleSideSatin": 52.8
     }
   },
   "turnaround": {
@@ -54,19 +172,39 @@
     },
     "200": {
       "48": 0,
-      "24": 7
+      "24": 6
     },
     "300": {
       "48": 0,
-      "24": 9
+      "24": 7
     },
     "400": {
       "48": 0,
-      "24": 11
+      "24": 9
     },
     "500": {
       "48": 0,
+      "24": 11
+    },
+    "600": {
+      "48": 0,
       "24": 13
+    },
+    "700": {
+      "48": 0,
+      "24": 15
+    },
+    "800": {
+      "48": 0,
+      "24": 17
+    },
+    "900": {
+      "48": 0,
+      "24": 19
+    },
+    "1000": {
+      "48": 0,
+      "24": 21
     }
   }
 }
