@@ -60,7 +60,7 @@ export class BusinessCardsCalculator extends AbstractCalculator<BusinessCardsDat
                     <label>Вид картон</label>
                     <div class="options-group paperType-options">
                         <button class="option-btn" data-value="chrome">Хромов картон 350 гр./кв.м.</button>
-                        <button class="option-btn" data-value="structural">Структурен картон 300 гр./кв.м.</button>
+                        <button class="option-btn" data-value="structural">Ефектен картон</button>
                     </div>
                 </div>
 
@@ -96,7 +96,6 @@ export class BusinessCardsCalculator extends AbstractCalculator<BusinessCardsDat
                         <button class="option-btn" data-value="600">600 бр.<span class="price-display">0.00 €</span></button>
                         <button class="option-btn" data-value="700">700 бр.<span class="price-display">0.00 €</span></button>
                         <button class="option-btn" data-value="800">800 бр.<span class="price-display">0.00 €</span></button>
-                        <button class="option-btn" data-value="900">900 бр.<span class="price-display">0.00 €</span></button>
                         <button class="option-btn" data-value="1000">1000 бр.<span class="price-display">0.00 €</span></button>
                     </div>
                 </div>
