@@ -32,10 +32,6 @@
       "oneSide": 35.5,
       "doubleSide": 59.5
     },
-    "900": {
-      "oneSide": 39,
-      "doubleSide": 66
-    },
     "1000": {
       "oneSide": 42.5,
       "doubleSide": 72.5
@@ -73,10 +69,6 @@
     "800": {
       "chrome": 8,
       "structural": 32
-    },
-    "900": {
-      "chrome": 9,
-      "structural": 36
     },
     "1000": {
       "chrome": 10,
@@ -148,14 +140,6 @@
       "doubleSideGloss": 19.6,
       "doubleSideSatin": 42.8
     },
-    "900": {
-      "oneSideMat": 13.6,
-      "oneSideGloss": 11.8,
-      "oneSideSatin": 29.8,
-      "doubleSideMat": 25.2,
-      "doubleSideGloss": 21.6,
-      "doubleSideSatin": 47.8
-    },
     "1000": {
       "oneSideMat": 14.8,
       "oneSideGloss": 12.8,
@@ -197,10 +181,6 @@
     "800": {
       "48": 0,
       "24": 17
-    },
-    "900": {
-      "48": 0,
-      "24": 19
     },
     "1000": {
       "48": 0,
